@@ -14,7 +14,7 @@
  * Collapsed top menu (below Tailwind's lg breakpoint; the full menu
  * needs ~1000px of width)
  * ------------------------------------------------------------------ */
-@media (max-width: 1023.98px) {
+@media (max-width: 1439.98px) {
   .cl-nav-toggle {
     display: inline-flex;
     align-items: center;

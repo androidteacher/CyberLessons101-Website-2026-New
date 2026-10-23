@@ -7,7 +7,7 @@
   var links = nav && nav.querySelector(".cl-nav-links");
   if (!toggle || !links) return;
 
-  var mobile = window.matchMedia("(max-width: 1023.98px)");
+  var mobile = window.matchMedia("(max-width: 1439.98px)");
   var groups = Array.prototype.slice.call(links.querySelectorAll(":scope > .group"));
 
   function setOpen(open) {
