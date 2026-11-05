@@ -10,6 +10,42 @@
 /* hamburger is desktop-hidden */
 .cl-nav-toggle { display: none; }
 
+/* section label inside a dropdown (e.g. "Social Media" under About) */
+.cl-nav-label {
+  display: block;
+  padding: 0.5rem 1rem 0.25rem;
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: rgb(100 116 139);
+}
+
+/* "Cyber Range" top-level link with its BETA tag */
+.cl-range-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+.cl-beta {
+  padding: 0.05rem 0.35rem;
+  border: 1px solid rgb(14 165 233 / 0.5);
+  border-radius: 0.25rem;
+  background: rgb(14 165 233 / 0.12);
+  font-size: 0.6rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  line-height: 1.4;
+  text-transform: uppercase;
+}
+
+/* dropdown anchored to the right edge (the last top-level menu) */
+.cl-dropdown-right {
+  left: auto;
+  right: 0;
+  transform-origin: top right;
+}
+
 /* --------------------------------------------------------------------
  * Collapsed top menu (below Tailwind's lg breakpoint; the full menu
  * needs ~1000px of width)
@@ -80,6 +116,12 @@
     border-top: 1px solid rgb(255 255 255 / 0.06);
   }
 
+  /* keep the BETA tag next to its label instead of pushed to the far edge */
+  .cl-nav-links > a.cl-range-link {
+    justify-content: flex-start;
+    gap: 0.5rem;
+  }
+
   /* sub-menus: in-flow accordion instead of hover pop-out */
   .cl-nav-links > .group > div {
     position: static !important;
@@ -100,6 +142,9 @@
     margin: 0 !important;
     border-top: 0 !important;
     font-size: 0.95rem;
+  }
+  .cl-nav-links > .group > div .cl-nav-label {
+    padding: 0.7rem 1.25rem 0.3rem 2.25rem;
   }
   /* chevron follows the accordion state, not hover (sticky on touch) */
   .cl-nav-links > .group > button svg {
